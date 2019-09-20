@@ -7,7 +7,9 @@
     <title>Element</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/main.min.css">
   </head>
 <body>
   <header class="header">
@@ -40,10 +42,148 @@
   </header>
   <main class="main">
 
+    <section class="hero">
+      <div class="container">
+          <h1 class="hero__h1">Lorem ipsum dolor sit amet consectetuer </h1>
+          <p class="hero__subtitle">Lorem ipsum dolor sit amet consectetuer</p>
+          <button class="button callback">Заказать звонок</button>
+      </div>
+    </section>
+
+    <section class="materials">
+      <div class="container bb">
+        <ul class="materials__nav row">
+            <li class="col-sm"><a href="#prom">Промышленные</a></li>
+            <li class="col-sm"><a href="#spec">Специальные</a></li>
+            <li class="col-sm"><a href="#arh">Архитектурно-строительные</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="materials__examples materials__examples--prom" id="prom">
+          <h2 class="materials__title">Промышленные материалы</h2>
+          <ul class="prom__items">
+            <li class="prom__item">
+              <img class="prom__image" src="img/materials/prom-1.jpg" alt="Фото материалов для деревообрабатывающей промышленности">
+              <p class="prom__name">Материалы для деревообрабатывающей промышленности</p>
+            </li>
+            <li class="prom__item">
+              <img class="prom__image" src="img/materials/prom-2.jpg" alt="Фото материалов для деревообрабатывающей промышленности">
+              <p class="prom__name">Материалы для деревообрабатывающей промышленности</p>
+            </li>
+            <li class="prom__item">
+              <img class="prom__image" src="img/materials/prom-3.jpg" alt="Фото материалов для деревообрабатывающей промышленности">
+              <p class="prom__name">Материалы для деревообрабатывающей промышленности</p>
+            </li>
+            <li class="prom__item">
+              <img class="prom__image" src="img/materials/prom-4.jpg" alt="Фото материалов для деревообрабатывающей промышленности">
+              <p class="prom__name">Материалы для деревообрабатывающей промышленности</p>
+            </li>
+          </ul>
+          <a class="button-link" href="#">Перейти в каталог</a>
+        </div>
+      </div>
+      <div class="container materials--spec">
+        <div class="materials__examples materials__examples--spec" id="spec">
+          <h2 class="materials__title">Специальные покрытия</h2>
+          <ul class="spec__items">
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-1.jpg" alt="Фото огнезащитные покрытия">
+              <p class="spec__name">Огнезащитные покрытия</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-2.jpg" alt="Фото термостойкие покрытия">
+              <p class="spec__name">Термостойкие покрытия</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-3.jpg" alt="Фото антимикробные покрытия">
+              <p class="spec__name">Антимикробные покрытия</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-4.jpg" alt="Фото огнезащитные покрытия">
+              <p class="spec__name">Огнезащитные покрытия</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-5.jpg" alt="Фото покрытия для дорожной разметки">
+              <p class="spec__name">Покрытия для дорожной разметки</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-6.jpg" alt="Фото термостойкие покрытия">
+              <p class="spec__name">Термостойкие покрытия</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-7.jpg" alt="Фото антимикробные покрытия">
+              <p class="spec__name">Антимикробные покрытия</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+            <li class="spec__item">
+              <img class="spec__image" src="img/materials/spec-8.jpg" alt="Фото покрытия для дорожной разметки">
+              <p class="spec__name">Покрытия для дорожной разметки</p>
+              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+              <a class="spec__link" href="#">Подробнее</a>
+            </li>
+          </ul>
+          <a class="button-link" href="#">Перейти в каталог</a>
+
+        </div>
+      </div>
+      <div class="container">
+        <div class="materials__examples materials__examples--arh" id="arh">
+            <h2 class="materials__title">Архитектурно-строительные материалы</h2>
+            <ul class="arh__items">
+              <li class="arh__item">
+                <img class="arh__image" src="img/materials/arh-1.jpg" alt="Фото огнезащитные покрытия">
+                <p class="arh__name">Огнезащитные покрытия</p>
+              </li>
+              <li class="arh__item">
+                <img class="arh__image" src="img/materials/arh-2.jpg" alt="Фото термостойкие покрытия">
+                <p class="arh__name">Термостойкие покрытия</p>
+              </li>
+              <li class="arh__item">
+                <img class="arh__image" src="img/materials/arh-3.jpg" alt="Фото антимикробные покрытия">
+                <p class="arh__name">Антимикробные покрытия</p>
+              </li>
+              <li class="arh__item">
+                <img class="arh__image" src="img/materials/arh-4.jpg" alt="Фото огнезащитные покрытия">
+                <p class="arh__name">Огнезащитные покрытия</p>
+              </li>
+              <li class="arh__item">
+                <img class="arh__image" src="img/materials/arh-5.jpg" alt="Фото покрытия для дорожной разметки">
+                <p class="arh__name">Покрытия для дорожной разметки</p>
+              </li>
+              <li class="arh__item">
+                <img class="arh__image" src="img/materials/arh-6.jpg" alt="Фото термостойкие покрытия">
+                <p class="arh__name">Термостойкие покрытия</p>
+              </li>
+            </ul>
+            <a class="button-link" href="#">Перейти в каталог</a>
+
+          </div>
+      </div>
+      </div>
+
+    </section>
+
   </main>
   <footer class="header">
 
   </footer>
+
+  <script src="js/jquery-3.4.1.slim.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
 
