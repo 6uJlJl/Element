@@ -223,3 +223,18 @@ body {
   display: block;
   padding: 0 10px;
   margin: 25px 0 10px; }
+
+.about {
+  background-color: #eeeeee;
+  padding: 60px 0;
+  color: #363636; }
+  .about__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .about__text {
+    line-height: 24px;
+    margin-bottom: 30px; }
+  .about__link {
+    color: #363636; }
