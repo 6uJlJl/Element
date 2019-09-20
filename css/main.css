@@ -80,6 +80,17 @@ body {
 .bb {
   border-bottom: 1px solid #363636; }
 
+.form-inline .btn:before {
+  content: "\e801";
+  font-family: "fontello"; }
+
+.navbar-toggler {
+  border-color: #363636 !important; }
+
+.btn {
+  border-color: #363636;
+  height: 40px; }
+
 .contact {
   background-color: #363636;
   color: #bababa;
@@ -92,6 +103,23 @@ body {
 
 .header__main {
   padding: 15px 0; }
+
+.navbar-toggler {
+  height: 40px; }
+
+.menu-icon:before {
+  content: "\f0c9";
+  font-family: "fontello"; }
+
+.list-icon:before {
+  content: "\f0ca";
+  font-family: "fontello";
+  color: white;
+  background-color: #363636;
+  font-size: 16px;
+  padding: 3px;
+  margin: 0;
+  border-radius: 3px; }
 
 .hero {
   min-height: 300px;
