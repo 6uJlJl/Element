@@ -34,6 +34,12 @@ p {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px; }
@@ -53,6 +59,9 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer; }
+  .button--dark {
+    border: 1px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.1); }
 
 .button-link {
   display: block;
@@ -265,3 +274,62 @@ body {
   .contacts__map {
     width: 100%;
     margin-top: 40px; }
+
+.footer {
+  background-color: #363636;
+  color: white;
+  padding: 60px 0 50px; }
+  .footer__logo {
+    margin: 40px 0 55px; }
+  .footer__nav {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .footer__nav li {
+      margin: 0 15px 30px; }
+      .footer__nav li a {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400; }
+  .footer__copy {
+    display: block;
+    margin-top: 40px;
+    color: #bababa; }
+    .footer__copy:before {
+      content: "\f1f9";
+      font-family: 'fontello';
+      margin-right: 10px; }
+
+.questions {
+  border-bottom: 1px solid #565656; }
+  .questions__title {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px; }
+    .questions__title b {
+      display: block; }
+  .questions__form {
+    margin-bottom: 60px; }
+  .questions__input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    line-height: 30px;
+    color: #ffffff; }
+    .questions__input:focus + .questions__label {
+      font-size: 12px;
+      transform: translateY(-50px);
+      transition: 0.5s; }
+  .questions__label {
+    display: block;
+    color: #bababa;
+    font-size: 16px;
+    font-weight: 400;
+    top: 10px;
+    transform: translateY(-30px);
+    transition: 0.5s; }
