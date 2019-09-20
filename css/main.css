@@ -226,7 +226,7 @@ body {
 
 .about {
   background-color: #eeeeee;
-  padding: 60px 0;
+  padding: 60px 0 0;
   color: #363636; }
   .about__title {
     font-size: 24px;
@@ -238,3 +238,30 @@ body {
     margin-bottom: 30px; }
   .about__link {
     color: #363636; }
+  .about__image {
+    width: 100%;
+    margin-top: 60px; }
+
+.contacts {
+  padding: 60px 0 0; }
+  .contacts__title {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
+  .contacts__item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; }
+    .contacts__item a {
+      display: block;
+      color: #363636; }
+  .contacts__name {
+    display: block;
+    color: #bababa;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .contacts__map {
+    width: 100%;
+    margin-top: 40px; }
