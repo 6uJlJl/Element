@@ -24,6 +24,22 @@ function style() {
 		.pipe(gulp.dest('css'));
 };
 
+function styleAbout() {
+  return gulp.src('sass/about.sass')
+		.pipe(plumber())
+		.pipe(sass())
+		.pipe(postcss([
+			autoprefixer()
+    ]))
+    .pipe(gulp.dest('css'))
+    .pipe(cleanCSS())
+    .pipe(rename({
+      basename: 'about',
+      suffix: '.min'
+    }))
+		.pipe(gulp.dest('css'));
+};
+
 function jpg() {
   return gulp.src("optimg/**/*.jpg")
     .pipe(imagemin([
@@ -53,7 +69,9 @@ function svg () {
 };
 
 function watch() {
-  gulp.watch("sass/**/*.sass", style);
+  gulp.watch("sass/**/main.sass", style);
+  gulp.watch("sass/**/about.sass", styleAbout);
+
 }
 
 var build = gulp.series(style, jpg, png, svg, watch);
