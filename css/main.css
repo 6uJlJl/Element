@@ -139,26 +139,27 @@ body {
         text-decoration: none;
         outline: none; }
 
-.header__main {
-  padding: 15px 0; }
-  .header__main .container {
+.header {
+  position: relative;
+  background-color: #fff; }
+  .header__main {
+    padding: 15px 0; }
+    .header__main .container {
+      display: flex;
+      justify-content: space-between; }
+  .header__logo {
     display: flex;
-    justify-content: space-between; }
-
-.header__logo {
-  display: flex;
-  flex-direction: column; }
-  .header__logo img {
-    width: 58px;
-    height: 40px; }
-  .header__logo span {
-    font-family: "Bebas";
-    color: #000000;
-    font-size: 21px; }
-
-.header__navigation {
-  display: flex;
-  align-items: center; }
+    flex-direction: column; }
+    .header__logo img {
+      width: 58px;
+      height: 40px; }
+    .header__logo span {
+      font-family: "Bebas";
+      color: #000000;
+      font-size: 21px; }
+  .header__navigation {
+    display: flex;
+    align-items: center; }
 
 .navbar-toggler {
   height: 40px; }
@@ -176,6 +177,55 @@ body {
   padding: 3px;
   margin: 0;
   border-radius: 3px; }
+
+.form__search {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100% !important;
+  padding: 50px;
+  background-color: #ffffff;
+  transform: translateY(0);
+  transition: translateY 0.3s;
+  z-index: -1;
+  border-top: 1px solid #363636; }
+  .form__search input {
+    width: 100% !important;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #000;
+    padding-left: 0;
+    padding-right: 80px; }
+  .form__search.active {
+    transform: translateY(100%);
+    transition: translateY 0.3s;
+    z-index: 10; }
+  .form__search.active + .btn-outline-secondary {
+    background-color: #000;
+    color: #ffffff;
+    outline: none; }
+
+.search__label {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; }
+  .search__label:after {
+    content: "\e801";
+    font-family: "fontello";
+    margin-left: 10px; }
+
+.navbar-nav.active {
+  position: fixed;
+  top: 143px;
+  right: 0;
+  z-index: 9;
+  background-color: #fff;
+  padding: 50px 200px 100vh 80px; }
+  .navbar-nav.active a {
+    margin-bottom: 30px; }
 
 @media (min-width: 576px) {
   .contact__items {
@@ -810,7 +860,8 @@ body {
     position: relative; }
   .questions__label {
     position: absolute;
-    top: 40px; }
+    top: 40px;
+    left: 0; }
     .questions__label--phone {
       left: 35%; }
   .questions input {

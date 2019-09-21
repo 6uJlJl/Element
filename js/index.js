@@ -83,11 +83,48 @@ window.onload = function() {
     ]
   });
 
-  // You can unslick at a given breakpoint now by adding:
-  // settings: "unslick"
-  // instead of a settings object
+  // ПОИСК
+  $(".btn.btn-outline-secondary").click(function(ev) {
+    ev.preventDefault();
+    $(".form__search").toggleClass("active");
+    $(".form__search input").val("");
+    $("#navbarNavAltMarkup").addClass("collapse navbar-collapse")
+    $(".navbar-nav").removeClass("active");
+  });
 
+  $(".search__label").on("click", function(){
+    if ($(".form__search input").val() != "") {
+      $(".form-inline").submit();
+    }
+  });
 
+  $(window).scroll(function(){
+    $(".form__search").removeClass("active");
+    $("#navbarNavAltMarkup").addClass("collapse navbar-collapse")
+    $(".navbar-nav").removeClass("active");
+  });
 
+  $(window).resize(function(){
+    $(".form__search").removeClass("active");
+    $("#navbarNavAltMarkup").addClass("collapse navbar-collapse")
+    $(".navbar-nav").removeClass("active");
+  });
 
+  $(".navbar-expand-lg").click( function(){
+    $("#navbarNavAltMarkup").toggleClass("collapse navbar-collapse")
+    $(".navbar-nav").toggleClass("active");
+    var pos = ($(".hero").offset().top - $(window).scrollTop() +1) + "px";
+    $(".navbar-nav").css("top", pos);
+    $(".form__search").removeClass("active");
+  })
+
+  // $(window).click(function(ev){
+  //   if (!$(".form__search").hasClass("header__navigation")){
+  //     if ($(".form__search").hasClass("active")) {
+  //       if (!$(event.target).closest('div').hasClass("form__search")) {
+  //         $(".form__search").removeClass("active");
+  //       };
+  //     }
+  //   }
+  // })
 };
