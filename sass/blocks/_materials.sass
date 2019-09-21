@@ -17,6 +17,11 @@
       cursor: pointer
     li a
       color: $text-color
+      &:hover,
+      &:focus
+        color: $active
+        text-decoration: none
+        outline: none
     li + li
       border-top: 1px solid #cccccc
   &__examples
@@ -230,7 +235,7 @@
   .materials
     .container
       width: 100%
-      padding: 0 60px
+      padding: 0 30px
     &__title
       max-width: 100%
       font-size: 30px
@@ -292,3 +297,45 @@
     &__name
       font-size: 20px
       line-height: 25px
+
+@media (min-width: 992px)
+  .prom
+    &__item
+      width: 420px
+      height: 340px
+    &__image
+      height: 250px
+    &__name
+      height: 70px
+      font-size: 20px
+      line-height: 25px
+    &__add
+      transform: translateY(135px)
+  .arh
+    &__item
+      width: 282px
+      height: 340px
+    &__image
+      width: 100%
+      height: 250px
+      object-fit: cover
+
+@media (min-width: 1200px)
+  .prom
+    &__item
+      width: 510px
+      height: 400px
+    &__image
+      height: 315px
+  .spec
+    &__item
+      width: 250px
+      height: 400px
+    &__image
+      height: 315px
+  .arh
+    &__item
+      width: 340px
+      height: 400px
+    &__image
+      height: 315px

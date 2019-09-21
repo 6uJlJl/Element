@@ -23,7 +23,7 @@ window.onload = function() {
         }
       },
       {
-        breakpoint: 1200,
+        breakpoint: 10000,
         settings: "unslick"
       }
     ]
@@ -50,7 +50,7 @@ window.onload = function() {
         }
       },
       {
-        breakpoint: 1200,
+        breakpoint: 10000,
         settings: "unslick"
       }
     ]
@@ -77,7 +77,7 @@ window.onload = function() {
         }
       },
       {
-        breakpoint: 1200,
+        breakpoint: 10000,
         settings: "unslick"
       }
     ]

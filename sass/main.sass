@@ -3,6 +3,12 @@
 @import "fonts"
 @import "slick"
 
+a
+  &:hover,
+  &:focus
+    color: $active
+    text-decoration: none
+    outline: none
 
 body
   font-family: 'Roboto', Arial, sans-serif;
@@ -27,7 +33,9 @@ body
     border: 1px solid #ffffff
     background-color: rgba(256, 256, 256, 0.1)
     width: 100%
-
+  &:hover,
+  &:focus
+    background-color: rgba(45, 182, 253, 1)
 .button-link
   display: block
   width: 259px
@@ -42,6 +50,11 @@ body
   cursor: pointer
   margin: 0 auto
   margin-top: 70px
+  &:hover,
+  &:focus
+    color: #fff
+    background-color: rgba(45, 182, 253, 1)
+    text-decoration: none
 
 
 .form-inline .btn
@@ -76,6 +89,8 @@ body
 @media (min-width: 768px)
   .button
     width: 350px
+    &--dark
+      width: 33%
   .button-link
     width: 350px
     margin-top: 0

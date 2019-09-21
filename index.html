@@ -17,30 +17,41 @@
     <div class="contact">
         <div class="container row align-items-center">
           <div class="contact__address col-xs col-sm-6">г. Москва, ул. Горького, д. 123</div>
-          <div class="contact__items col-xs col-sm-6 d-flex justify-content-between ">
+          <div class="contact__items col-xs col-sm-6 col-md-5 col-lg-4 clo-xl-3 d-flex justify-content-between ">
             <a href="tel:+74959999999">+7 495 999 99 99</a>
             <a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
           </div>
         </div>
       </div>
     <div class="header__main">
-      <div class="container row d-flex justify-content-around">
+      <div class="container row">
         <div class="header__logo">
             <img src="img/header/logo.png" alt="Логотип компании Элемент">
             <span>Элемент</span>
           </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-0">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="menu-icon"></span>
-          </button>
-          <form class="form-inline">
-            <!-- <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search"> -->
-            <button class="btn btn-outline-secondary my-2 my-sm-1" type="submit"></button>
-          </form>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="list-icon"></span>
-          </button>
-        </nav>
+        <div class="header__navigation">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="menu-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-item nav-link" href="#">Каталог<span class="sr-only">(current)</span></a>
+                      <a class="nav-item nav-link" href="#">О нас</a>
+                      <a class="nav-item nav-link" href="#">Галерея</a>
+                      <a class="nav-item nav-link" href="#">Новости</a>
+                      <a class="nav-item nav-link" href="#">Контакты</a>
+                    </div>
+                  </div>
+              </nav>
+              <form class="form-inline">
+                <!-- <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <button class="btn btn-outline-secondary my-2 my-sm-1" type="submit"></button>
+              </form>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="list-icon"></span>
+              </button>
+        </div>
       </div>
     </div>
   </header>
@@ -281,11 +292,11 @@
           <b>Есть вопросы?</b>
           Мы вам перезвоним!</h2>
         <form action="post" class="questions__form">
-          <input class="questions__input" type="text" name="c" id="questions-name">
+          <input class="questions__input form__item" type="text" name="c" id="questions-name">
           <label class="questions__label" for="questions-name">Как к вам обращаться?</label>
-          <input class="questions__input" type="tel" name="questions-phone" id="questions-phone">
+          <input class="questions__input form__item" type="tel" name="questions-phone" id="questions-phone">
           <label class="questions__label questions__label--phone" for="questions-phone">Ваш номер телефона</label>
-          <button class="button button--dark" type="submit">Отправить</button>
+          <button class="button button--dark form__item" type="submit">Отправить</button>
         </form>
       </section>
       <section class="footer__navigation">

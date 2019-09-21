@@ -12,9 +12,17 @@
     margin-top: 10px
     a
       color: #bababa
+      &:hover,
+      &:focus
+        color: $active
+        text-decoration: none
+        outline: none
 .header
   &__main
     padding: 15px 0
+    .container
+      display: flex
+      justify-content: space-between
   &__logo
     display: flex
     flex-direction: column
@@ -25,6 +33,9 @@
       font-family: "Bebas"
       color: #000000;
       font-size: 21px;
+  &__navigation
+    display: flex
+    align-items: center
 .navbar-toggler
   height: 40px
 .menu-icon
@@ -55,10 +66,36 @@
         height: 57px
       span
         font-size: 30px
-
   .navbar-toggler
     width: 87px
     height: 45px
   .form-inline .btn
     width: 87px
     height: 45px
+
+@media (min-width: 768px)
+  .contact
+    .container
+      justify-content: space-between
+
+@media (min-width: 992px)
+  .nav-item.nav-link
+    color: $text-color
+    font-size: 16px
+    margin-right: 30px
+    position: relative
+  .nav-item.nav-link:after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 1px
+    background-color: transparent
+  .nav-item.nav-link:hover:after
+    background-color: $active
+  .nav-item.nav-link:focus
+    outline: none
+    &:after
+      background-color: $active
+

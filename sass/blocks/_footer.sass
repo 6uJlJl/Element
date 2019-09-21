@@ -16,6 +16,11 @@
         color: #ffffff
         font-size: 16px
         font-weight: 400
+        &:hover,
+        &:focus
+          color: $active
+          text-decoration: none
+          outline: none
   &__copy
     display: block
     margin-top: 40px
@@ -62,6 +67,10 @@
 
 @media (min-width: 576px)
   .questions
+    &__title
+      font-size: 30px
+      line-height: 40px
+      margin-bottom: 60px
     &__form
       width: 360px
 @media (min-width: 768px)
@@ -74,6 +83,28 @@
       position: absolute
       top: 40px
       &--phone
-        left: 42%
+        left: 35%
     input
       margin-right: 30px
+  .form
+    &__item
+      width: 33%
+  .footer
+    &__nav
+      padding: 0 10%
+
+
+@media (min-width: 992px)
+  .questions
+    &__label
+      &--phone
+        left: 34%
+    input
+      margin-right: 30px
+  .form
+    &__item
+      width: 33%
+  .footer
+    &__nav
+      padding: 0 15%
+
