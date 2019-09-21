@@ -2,6 +2,7 @@
   background-color: $text-color
   color: white
   padding: 60px 0 50px
+  text-align: center
   &__logo
     margin: 40px 0 55px
   &__nav
@@ -35,6 +36,8 @@
     b
       display: block
   &__form
+    width: 260px
+    margin: 0 auto
     margin-bottom: 60px
   &__input
     width: 100%
@@ -53,7 +56,11 @@
     font-size: 16px
     font-weight: 400
     top: 10px
+    text-align: left
     transform: translateY(-30px)
     transition: 0.5s
 
-
+@media (min-width: 576px)
+  .questions
+    &__form
+      width: 360px

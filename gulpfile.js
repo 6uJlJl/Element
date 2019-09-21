@@ -25,7 +25,7 @@ function style() {
 };
 
 function jpg() {
-  return gulp.src("img/**/*.jpg")
+  return gulp.src("optimg/**/*.jpg")
     .pipe(imagemin([
       // imagemin.jpegtran({
       //   progressive: true,
@@ -33,30 +33,29 @@ function jpg() {
       // }),
       imageminMozjpeg({quality: 80, progressive: true, tune: "ms-ssim", smooth: 2})
     ]))
-    .pipe(gulp.dest("images"));
+    .pipe(gulp.dest("img"));
 };
 
 function png () {
-  return gulp.src("img/**/*.png")
+  return gulp.src("optimg/**/*.png")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 5})
     ]))
-    .pipe(gulp.dest("images"));
+    .pipe(gulp.dest("img"));
 };
 
 function svg () {
-  return gulp.src("img/**/*.svg")
+  return gulp.src("optimg/**/*.svg")
     .pipe(imagemin([
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("images"));
+    .pipe(gulp.dest("img"));
 };
 
 function watch() {
   gulp.watch("sass/**/*.sass", style);
 }
 
-var build = gulp.series(style, jpg, png, svg);
-// , watch
+var build = gulp.series(style, jpg, png, svg, watch);
 
 exports.default = build;

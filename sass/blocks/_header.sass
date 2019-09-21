@@ -2,6 +2,11 @@
   background-color: #363636
   color: #bababa
   padding: 12px 0
+  &__address:before
+    content: "\e803"
+    font-family: "fontello"
+    margin-right: 10px
+    font-size: 18px
   &__items
     width: 100%
     margin-top: 10px
@@ -10,7 +15,16 @@
 .header
   &__main
     padding: 15px 0
-
+  &__logo
+    display: flex
+    flex-direction: column
+    img
+      width: 58px
+      height: 40px
+    span
+      font-family: "Bebas"
+      color: #000000;
+      font-size: 21px;
 .navbar-toggler
   height: 40px
 .menu-icon
@@ -27,3 +41,24 @@
     padding: 3px
     margin: 0
     border-radius: 3px
+
+@media (min-width: 576px)
+  .contact
+    &__items
+      margin-top: 0
+  .header
+    &__logo
+      flex-direction: row
+      align-items: center
+      img
+        width: 82px
+        height: 57px
+      span
+        font-size: 30px
+
+  .navbar-toggler
+    width: 87px
+    height: 45px
+  .form-inline .btn
+    width: 87px
+    height: 45px

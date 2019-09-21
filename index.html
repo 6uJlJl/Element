@@ -15,9 +15,9 @@
 <body>
   <header class="header">
     <div class="contact">
-        <div class="container row">
-          <div class="contact__address col-xs">г. Москва, ул. Горького, д. 123</div>
-          <div class="contact__items col-xs d-flex justify-content-between ">
+        <div class="container row align-items-center">
+          <div class="contact__address col-xs col-sm-6">г. Москва, ул. Горького, д. 123</div>
+          <div class="contact__items col-xs col-sm-6 d-flex justify-content-between ">
             <a href="tel:+74959999999">+7 495 999 99 99</a>
             <a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
           </div>
@@ -25,7 +25,10 @@
       </div>
     <div class="header__main">
       <div class="container row d-flex justify-content-around">
-        <img src="img/header/logo.png" alt="Логотип компании Элемент" class="header__logo">
+        <div class="header__logo">
+            <img src="img/header/logo.png" alt="Логотип компании Элемент">
+            <span>Элемент</span>
+          </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-0">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="menu-icon"></span>
@@ -52,13 +55,14 @@
     </section>
 
     <section class="materials">
-      <div class="container bb">
+      <div class="container">
         <ul class="materials__nav row">
-            <li class="col-sm"><a href="#prom">Промышленные</a></li>
-            <li class="col-sm"><a href="#spec">Специальные</a></li>
-            <li class="col-sm"><a href="#arh">Архитектурно-строительные</a></li>
+            <li class="col-md"><a href="#prom">Промышленные</a></li>
+            <li class="col-md"><a href="#spec">Специальные</a></li>
+            <li class="col-md"><a href="#arh">Архитектурно-строительные</a></li>
         </ul>
       </div>
+      <div class="line"></div>
       <div class="container">
         <div class="materials__examples materials__examples--prom" id="prom">
           <h2 class="materials__title">Промышленные материалы</h2>
@@ -83,61 +87,63 @@
           <a class="button-link" href="#">Перейти в каталог</a>
         </div>
       </div>
-      <div class="container materials--spec">
-        <div class="materials__examples materials__examples--spec" id="spec">
-          <h2 class="materials__title">Специальные покрытия</h2>
-          <ul class="spec__items">
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-1.jpg" alt="Фото огнезащитные покрытия">
-              <p class="spec__name">Огнезащитные покрытия</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-2.jpg" alt="Фото термостойкие покрытия">
-              <p class="spec__name">Термостойкие покрытия</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-3.jpg" alt="Фото антимикробные покрытия">
-              <p class="spec__name">Антимикробные покрытия</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-4.jpg" alt="Фото огнезащитные покрытия">
-              <p class="spec__name">Огнезащитные покрытия</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-5.jpg" alt="Фото покрытия для дорожной разметки">
-              <p class="spec__name">Покрытия для дорожной разметки</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-6.jpg" alt="Фото термостойкие покрытия">
-              <p class="spec__name">Термостойкие покрытия</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-7.jpg" alt="Фото антимикробные покрытия">
-              <p class="spec__name">Антимикробные покрытия</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-            <li class="spec__item">
-              <img class="spec__image" src="img/materials/spec-8.jpg" alt="Фото покрытия для дорожной разметки">
-              <p class="spec__name">Покрытия для дорожной разметки</p>
-              <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
-              <a class="spec__link" href="#">Подробнее</a>
-            </li>
-          </ul>
-          <a class="button-link" href="#">Перейти в каталог</a>
+      <div class="materials--spec">
+        <div class="container">
+            <div class="materials__examples materials__examples--spec" id="spec">
+                <h2 class="materials__title">Специальные покрытия</h2>
+                <ul class="spec__items">
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-1.jpg" alt="Фото огнезащитные покрытия">
+                    <p class="spec__name">Огнезащитные покрытия</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-2.jpg" alt="Фото термостойкие покрытия">
+                    <p class="spec__name">Термостойкие покрытия</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-3.jpg" alt="Фото антимикробные покрытия">
+                    <p class="spec__name">Антимикробные покрытия</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-4.jpg" alt="Фото огнезащитные покрытия">
+                    <p class="spec__name">Огнезащитные покрытия</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-5.jpg" alt="Фото покрытия для дорожной разметки">
+                    <p class="spec__name">Покрытия для дорожной разметки</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-6.jpg" alt="Фото термостойкие покрытия">
+                    <p class="spec__name">Термостойкие покрытия</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-7.jpg" alt="Фото антимикробные покрытия">
+                    <p class="spec__name">Антимикробные покрытия</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                  <li class="spec__item">
+                    <img class="spec__image" src="img/materials/spec-8.jpg" alt="Фото покрытия для дорожной разметки">
+                    <p class="spec__name">Покрытия для дорожной разметки</p>
+                    <span class="spec__desrc">Водоразбавляемые и УФ-отверждаемые материалы</span>
+                    <a class="spec__link" href="#">Подробнее</a>
+                  </li>
+                </ul>
+                <a class="button-link" href="#">Перейти в каталог</a>
 
+              </div>
         </div>
       </div>
       <div class="container">
@@ -190,20 +196,22 @@
     <div class="contacts">
       <div class="container">
         <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__item">
-          <span class="contacts__name">Адрес:</span>
-          123456, г. Москва,<br> ул. Горького, д. 123
-        </p>
-        <p class="contacts__item">
-          <span class="contacts__name">Телефон:</span>
-          <a href="tel:+74959999999">+7 495 999 99 99</a>
-          <a href="tel:+74959999999">+7 495 999 99 99</a>
-        </p>
-        <p class="contacts__item">
-          <span class="contacts__name">E-mail:</span>
-          <a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
-          <a href="mailto:ask@sitename.ru">ask@sitename.ru</a>
-        </p>
+        <div class="contacts__items">
+          <p class="contacts__item">
+            <span class="contacts__name">Адрес:</span>
+            123456, г. Москва,<br> ул. Горького, д. 123
+          </p>
+          <p class="contacts__item">
+            <span class="contacts__name">Телефон:</span>
+            <a href="tel:+74959999999">+7 495 999 99 99</a>
+            <a href="tel:+74959999999">+7 495 999 99 99</a>
+          </p>
+          <p class="contacts__item">
+            <span class="contacts__name">E-mail:</span>
+            <a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
+            <a href="mailto:ask@sitename.ru">ask@sitename.ru</a>
+          </p>
+        </div>
       </div>
       <img class="contacts__map" src="img/contacts/map.jpg" alt="Адрес 123456, г. Москва, ул. Горького, д. 123">
     </div>
@@ -263,3 +271,11 @@ PerfectPixel не требуется.
 IE до 11 в расчет не берем.
 Проверять валидность будем на 3w валидаторе + google page speed insights (нужно в зеленой зоне).
 -->
+<!--
+.icon-right-open:before { content: '\e800'; }
+.icon-search:before { content: '\e801'; }
+.icon-cancel:before { content: '\e802'; }
+.icon-location:before { content: '\e803'; }
+.icon-menu:before { content: '\f0c9'; }
+.icon-list-bullet:before { content: '\f0ca'; }
+.icon-copyright:before { content: '\f1f9'; }  -->

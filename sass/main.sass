@@ -1,6 +1,7 @@
 @import "basic"
 @import "colors"
 @import "fonts"
+@import "slick"
 
 
 body
@@ -25,6 +26,7 @@ body
   &--dark
     border: 1px solid #ffffff
     background-color: rgba(256, 256, 256, 0.1)
+    width: 100%
 
 .button-link
   display: block
@@ -38,10 +40,9 @@ body
   text-align: center
   line-height: 40px
   cursor: pointer
+  margin: 0 auto
   margin-top: 40px
 
-.bb
-  border-bottom: 1px solid #363636
 
 .form-inline .btn
   &:before
@@ -55,6 +56,12 @@ body
   border-color: #363636
   height: 40px
 
+.line
+  display: block
+  width: 100%
+  height: 1px
+  background-color: #363636
+
 @import "blocks/header"
 @import "blocks/hero"
 @import "blocks/materials"
@@ -62,5 +69,6 @@ body
 @import "blocks/contacts"
 @import "blocks/footer"
 
-
-
+@media (min-width: 576px)
+  .button-link
+    width: 350px

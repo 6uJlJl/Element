@@ -4,11 +4,13 @@ window.onload = function() {
 
   $('.prom__items').slick({
     dots: true,
+    arrows: false,
     infinite: false,
     speed: 300,
+    slidesToShow: 2,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -19,11 +21,13 @@ window.onload = function() {
 
   $('.spec__items').slick({
     dots: true,
+    arrows: false,
     infinite: false,
     speed: 300,
+    slidesToShow: 2,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -34,11 +38,13 @@ window.onload = function() {
 
   $('.arh__items').slick({
     dots: true,
+    arrows: false,
     infinite: false,
     speed: 300,
+    slidesToShow: 2,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
