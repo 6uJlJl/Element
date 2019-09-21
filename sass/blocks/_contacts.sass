@@ -25,10 +25,10 @@
     object-fit: cover
 
 @media (min-width: 576px)
-  .container
-    padding-left: 50px
-    padding-right: 50px
   .contacts
+    .container
+      padding-left: 50px
+      padding-right: 50px
     &__items
       display: flex
       justify-content: space-between
@@ -37,3 +37,21 @@
     &__map
       height: 300px
 
+@media (min-width: 768px)
+  .contacts
+    padding: 0
+    position: relative
+    &__map
+      height: 670px
+      object-fit: cover
+      margin: 0
+    .container
+      position: absolute
+      left: 40px
+      top: 100px
+      background-color: #ffffff
+      width: 270px
+      padding: 55px 10px 55px 35px
+    &__items
+      display: flex
+      flex-direction: column

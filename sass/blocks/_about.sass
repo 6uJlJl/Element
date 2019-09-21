@@ -15,6 +15,26 @@
     margin-bottom: 30px
   &__link
     color: $text-color
+    &:after
+      content: "\e800"
+      font-family: "fontello"
+      font-size: 10px
+      margin-left: 5px
   &__image
     width: 100%
     margin-top: 60px
+
+@media (min-width: 576px)
+  .about
+    &__image
+      height: 548px
+      object-fit: cover
+
+@media (min-width: 768px)
+  .about
+    &__image
+      height: 668px
+    &__title
+      font-size: 30px
+
+

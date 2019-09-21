@@ -64,3 +64,16 @@
   .questions
     &__form
       width: 360px
+@media (min-width: 768px)
+  .questions
+    &__form
+      width: 100%
+      display: flex
+      position: relative
+    &__label
+      position: absolute
+      top: 40px
+      &--phone
+        left: 42%
+    input
+      margin-right: 30px
