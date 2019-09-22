@@ -47,7 +47,7 @@ function jpg() {
       //   progressive: true,
       //   arithmetic:true
       // }),
-      imageminMozjpeg({quality: 80, progressive: true, tune: "ms-ssim", smooth: 2})
+      imageminMozjpeg({quality: 90, progressive: false, smooth: 1})
     ]))
     .pipe(gulp.dest("img"));
 };

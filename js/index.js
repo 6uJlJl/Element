@@ -83,6 +83,33 @@ window.onload = function() {
     ]
   });
 
+  $('.about-slider__items').slick({
+    dots: true,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 10000,
+        settings: "unslick"
+      }
+    ]
+  });
+
   // ПОИСК
   $(".btn.btn-outline-secondary").click(function(ev) {
     ev.preventDefault();
