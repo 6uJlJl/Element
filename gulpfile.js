@@ -40,6 +40,25 @@ function styleAbout() {
 		.pipe(gulp.dest('css'));
 };
 
+function styleContacts() {
+  return gulp.src('sass/pcontacts.sass')
+		.pipe(plumber())
+		.pipe(sass())
+		.pipe(postcss([
+			autoprefixer()
+    ]))
+    .pipe(rename({
+      basename: 'contacts',
+    }))
+    .pipe(gulp.dest('css'))
+    .pipe(cleanCSS())
+    .pipe(rename({
+      basename: 'contacts',
+      suffix: '.min'
+    }))
+		.pipe(gulp.dest('css'));
+};
+
 function jpg() {
   return gulp.src("optimg/**/*.jpg")
     .pipe(imagemin([
@@ -71,9 +90,11 @@ function svg () {
 function watch() {
   gulp.watch("sass/**/main.sass", style);
   gulp.watch("sass/**/about.sass", styleAbout);
+  gulp.watch("sass/**/pcontacts.sass", styleContacts);
+
 
 }
 
-var build = gulp.series(style, jpg, png, svg, watch);
+var build = gulp.series(style, styleAbout, styleContacts, jpg, png, svg, watch);
 
 exports.default = build;

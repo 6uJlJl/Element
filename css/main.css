@@ -277,7 +277,7 @@ body {
   background-position: center, left center;
   background-size: cover;
   color: white;
-  padding: 60px 0;
+  padding: 60px 0 30px;
   text-align: center;
   position: relative; }
   .hero__h1 {
@@ -760,14 +760,15 @@ body {
 
 @media (min-width: 768px) {
   .contacts {
-    padding: 0;
-    position: relative; }
+    padding: 0; }
+    .contacts .container {
+      position: relative; }
     .contacts__map {
       height: 670px;
       -o-object-fit: cover;
          object-fit: cover;
       margin: 0; }
-    .contacts .container {
+    .contacts__wrapper {
       position: absolute;
       left: 40px;
       top: 100px;
@@ -777,6 +778,13 @@ body {
     .contacts__items {
       display: flex;
       flex-direction: column; } }
+
+@media (min-width: 1200px) {
+  .contacts .container {
+    max-width: 1111px;
+    margin: 0 auto; }
+  .contacts__wrapper {
+    left: 30px; } }
 
 .footer {
   background-color: #363636;

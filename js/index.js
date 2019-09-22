@@ -110,6 +110,8 @@ window.onload = function() {
     ]
   });
 
+  console.log($(document).width());
+
   // ПОИСК
   $(".btn.btn-outline-secondary").click(function(ev) {
     ev.preventDefault();
@@ -138,11 +140,13 @@ window.onload = function() {
   });
 
   $(".navbar-expand-lg").click( function(){
-    $("#navbarNavAltMarkup").toggleClass("collapse navbar-collapse")
-    $(".navbar-nav").toggleClass("active");
-    var pos = ($(".hero").offset().top - $(window).scrollTop() +1) + "px";
-    $(".navbar-nav").css("top", pos);
-    $(".form__search").removeClass("active");
+    if ($(document).width() < 992) {
+      $("#navbarNavAltMarkup").toggleClass("collapse navbar-collapse")
+      $(".navbar-nav").toggleClass("active");
+      var pos = ($(".hero").offset().top - $(window).scrollTop() +1) + "px";
+      $(".navbar-nav").css("top", pos);
+      $(".form__search").removeClass("active");
+    }
   })
 
   // $(window).click(function(ev){

@@ -40,12 +40,13 @@
 @media (min-width: 768px)
   .contacts
     padding: 0
-    position: relative
+    .container
+      position: relative
     &__map
       height: 670px
       object-fit: cover
       margin: 0
-    .container
+    &__wrapper
       position: absolute
       left: 40px
       top: 100px
@@ -55,3 +56,11 @@
     &__items
       display: flex
       flex-direction: column
+
+@media (min-width: 1200px)
+  .contacts
+    .container
+      max-width: 1111px
+      margin: 0 auto
+    &__wrapper
+      left: 30px
