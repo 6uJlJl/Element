@@ -59,6 +59,22 @@ function styleContacts() {
 		.pipe(gulp.dest('css'));
 };
 
+function styleCatalog() {
+  return gulp.src('sass/catalog.sass')
+		.pipe(plumber())
+		.pipe(sass())
+		.pipe(postcss([
+			autoprefixer()
+    ]))
+    .pipe(gulp.dest('css'))
+    .pipe(cleanCSS())
+    .pipe(rename({
+      basename: 'catalog',
+      suffix: '.min'
+    }))
+		.pipe(gulp.dest('css'));
+};
+
 function jpg() {
   return gulp.src("optimg/**/*.jpg")
     .pipe(imagemin([
@@ -91,10 +107,9 @@ function watch() {
   gulp.watch("sass/**/main.sass", style);
   gulp.watch("sass/**/about.sass", styleAbout);
   gulp.watch("sass/**/pcontacts.sass", styleContacts);
-
-
+  gulp.watch("sass/**/catalog.sass", styleCatalog);
 }
 
-var build = gulp.series(style, styleAbout, styleContacts, jpg, png, svg, watch);
+var build = gulp.series(style, styleAbout, styleContacts, styleCatalog, jpg, png, svg, watch);
 
 exports.default = build;

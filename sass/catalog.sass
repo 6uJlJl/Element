@@ -1,0 +1,109 @@
+@import "basic"
+@import "colors"
+@import "fonts"
+@import "slick"
+
+body
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px
+
+.hero
+  &--catalog
+    background-image: none;
+    background-color: #fff
+    min-height: 44px
+    padding: 0
+.breadcrumb
+  padding-left: 0
+
+.catalog
+  text-align: center
+  &__title
+    text-align: left
+    color: $text-color
+    font-family: Roboto
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 35px
+  &__button
+    width: 258px
+    height: 40px
+    background-color: #363636
+    border: none
+    color: #ffffff
+    font-size: 16px
+    font-weight: 400
+    text-transform: uppercase
+  &__main
+    margin-bottom: 100px
+    position: relative
+  &__text
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    margin-bottom: 100px
+  &__filters
+    text-align: left
+    margin-bottom: 40px
+
+.main
+  &__items
+    list-style-type: none;
+    margin: 0
+    padding: 0
+  &__item
+    text-align: left
+    margin: 0 auto
+    margin-bottom: 40px
+    width: 258px
+  &__image
+    width: 100%
+    height: 258px
+    background-color: #eeeeee
+    object-fit: cover
+  &__name
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: -0.16px
+    line-height: 20px
+    margin-bottom: 5px
+  &__brand
+    display: block
+    font-size: 14px
+    font-weight: 400
+    color: $text-color
+    text-decoration: underline
+    margin-bottom: 15px
+  &__price
+    color: #68b8fc
+    font-size: 20px
+    font-weight: 700
+
+.filters
+  &__button
+    width: 115px
+    height: 41px
+    border: 1px solid #363636
+    text-transform: uppercase
+    background-color: transparent
+    color: $text-color
+    font-size: 14px
+    font-weight: 400
+
+.form
+  &__show
+    position: absolute
+    width: 115px
+    height: 40px
+    border: 1px solid #363636
+    background-color: transparent
+    color: $text-color
+    font-size: 14px
+    font-weight: 400
+    font-size: 0
+    top: -81px
+    &:before
+      content: "\e801"
+      font-family: "fontello"
+      font-size: 18px

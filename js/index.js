@@ -110,8 +110,6 @@ window.onload = function() {
     ]
   });
 
-  console.log($(document).width());
-
   // ПОИСК
   $(".btn.btn-outline-secondary").click(function(ev) {
     ev.preventDefault();
