@@ -1,0 +1,170 @@
+@import "basic"
+@import "colors"
+@import "fonts"
+@import "slick"
+
+body
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px
+
+.hero
+  &--card
+    background-image: none;
+    background-color: #fff
+    min-height: 44px
+    padding: 0
+
+.breadcrumb
+  padding-left: 0
+
+.card
+  border: none
+  &__title
+    color: #363636
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 25px
+  &__types
+    list-style-type: none
+    margin: 0
+    padding: 0
+    margin-bottom: 35px
+    li+li
+      margin-top: 9px
+  &__type
+    display: inline-block
+    padding: 0 23px
+    line-height: 31px
+    border-radius: 3px
+    border: 1px solid #67b7fa
+    background-color: #e8f7ff
+    color: #000006
+    font-size: 16px
+    margin-right: 10px
+  &__volume
+    margin-bottom: 30px
+  &__nums
+    margin-bottom: 30px
+  &__tab-nav
+    margin-top: 40px
+    margin-bottom: 40px
+    border-top: 1px solid #363636
+    border-bottom: 1px solid #363636
+    .container
+      padding: 0
+
+
+.chars
+  &__title
+    color: #363636
+    font-size: 16px
+    font-weight: 700
+    margin-bottom: 20px
+  &__items
+    width: 100%
+    margin-bottom: 20px
+    tr
+      td
+        min-height: 16px
+        padding: 10px
+      td:nth-child(2)
+        font-weight: bold
+    tr:nth-child(2n-1)
+      background-color: #eeeeee
+  &__button
+    display: block
+    border: none
+    background-color: #fff
+    height: 13px
+    color: #555555
+    font-size: 14px
+    font-weight: 400
+    text-decoration: underline
+    padding: 0
+    margin-bottom: 40px
+
+.volume
+  &__title
+    color: #363636
+    font-size: 16px
+    font-weight: 700
+    margin-bottom: 20px
+
+.nums
+  &__minus
+    font-size: 0
+    width: 38px
+    height: 38px
+    border: 1px solid #ced4da
+    background-color: #fff
+    margin-top: 1px
+    &:before
+      content: "\e806"
+      font-family: "fontello"
+      font-size: 18px
+  &__plus
+    font-size: 0
+    font-size: 0
+    width: 38px
+    height: 38px
+    border: 1px solid #ced4da
+    background-color: #fff
+    margin-top: 1px
+    &:before
+      content: "\e805"
+      font-family: "fontello"
+      font-size: 18px
+  &__label
+    font-size: 0
+  &__input
+    font-size: 18px
+    height: 38px
+    width: 80px
+    margin: 0 -4px
+    text-align: center
+
+.price
+  display: block
+  color: #68b8fc
+  font-size: 30px
+  font-weight: 700
+  margin-bottom: 30px
+  &__buy
+    min-height: 40px
+    background-color: #6cb5fa
+    width: 100%
+    border: none
+    color: #ffffff
+    font-size: 16px
+    text-transform: uppercase
+    margin-bottom: 50px
+
+.slick-dots
+  bottom: 0
+.slick-dots li button:before
+  background-color: transparent
+  border: 1px solid #999999
+.slick-dots li.slick-active button:before
+  background-color: #999999
+
+.tab-nav
+  &__items
+    text-align: center
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item
+    font-size: 18px
+    font-weight: 400
+    line-height: 22px
+    text-transform: uppercase
+    padding: 20px 30px
+    &:not(:last-child)
+      border-bottom: 1px solid #999999
+    a
+      color: $text-color
+    &--active
+      background-color: #eeeeee
+
+

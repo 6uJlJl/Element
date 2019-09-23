@@ -120,6 +120,7 @@ body {
 .main__name {
   font-size: 16px;
   font-weight: 700;
+  color: #363636;
   letter-spacing: -0.16px;
   line-height: 20px;
   margin-bottom: 5px; }
