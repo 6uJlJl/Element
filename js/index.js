@@ -147,6 +147,39 @@ window.onload = function() {
     }
   })
 
+  // СТРАНИЦА КАТАЛОГ
+  // Форма поиска
+
+  $(".catalog-form__show").on ("click", function(ev){
+    ev.preventDefault();
+    $(".catalog-form__search").toggleClass ("open");
+    $(".catalog-form__submit").toggleClass ("open");
+    $(".catalog-form__search").val("");
+  })
+
+  // ФИЛЬТРЫ
+    $(".filter__button").on("click", function(ev){
+      $(this).toggleClass("filter__button--open")
+    })
+
+    $(".filters__button").on("click", function(ev){
+      ev.preventDefault();
+      $(".filters__button").toggleClass("filters__button--open")
+
+      $(".filters__button").hasClass("filters__button--open")
+        ? $(".catalog-form").css("display","none")
+        : $(".catalog-form").css("display","flex")
+    })
+
+    // СБРОС ФИЛЬТРОВ
+    $(".filters__clear").on("click", function(ev){
+      ev.preventDefault();
+      var inputs = $(".filters").find("input");
+      for (let i=0; i<inputs.length; i++){
+        inputs[i].checked = false;
+      }
+    });
+
   // $(window).click(function(ev){
   //   if (!$(".form__search").hasClass("header__navigation")){
   //     if ($(".form__search").hasClass("active")) {
