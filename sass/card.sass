@@ -160,6 +160,7 @@ body
     line-height: 22px
     text-transform: uppercase
     padding: 20px 30px
+    cursor: pointer
     &:not(:last-child)
       border-bottom: 1px solid #999999
     a
@@ -167,4 +168,158 @@ body
     &--active
       background-color: #eeeeee
 
+.card__tab-items
+  padding-bottom: 80px
 
+.tab__descr
+  display: none
+  &.active
+    display: block
+  p
+    color: #363636
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    margin-bottom: 20px
+  h3
+    color: #363636
+    font-size: 16px
+    font-weight: 700
+    margin-top: 30px
+    margin-bottom: 20px
+
+.tab__chars
+  display: none
+  &.active
+    display: block
+  table
+    width: 100%
+    margin-bottom: 20px
+    tr
+      td
+        min-height: 16px
+        padding: 10px
+        a
+          color: $text-color
+      td:nth-child(2)
+        font-weight: bold
+    tr:nth-child(2n-1)
+      background-color: #eeeeee
+
+.tab__docs
+  display: none
+  &.active
+    display: block
+  h3
+    color: #363636
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    margin-bottom: 15px
+  p
+    padding-left: 30px
+    padding-top: 5px
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      background: url("../img/page-card/adobe.png") no-repeat center
+      width: 20px
+      height: 26px
+      margin-right: 10px
+      margin-bottom: -5px
+    a
+      display: inline-block
+      color: #000006
+      font-size: 14px
+      font-weight: 400
+      text-decoration: underline
+      margin-right: 20px
+      margin-bottom: 5px
+      &:last-child
+        margin-right: 0
+    span
+      display: inline-block
+      margin-right: 10px
+      &:last-child
+        margin-right: 0
+
+@media (min-width: 576px)
+  .hero
+    &--card
+      .container
+        max-width: 1111px
+  .card
+    &__nums
+      display: inline-block
+      margin-right: 30px
+    &__price
+      display: inline-block
+
+@media (min-width: 768px)
+  .hero
+    &--card
+      padding: 0 30px
+  .card
+    &__wrapper
+      display: flex
+      justify-content: space-between
+    &__info
+      margin-right: 30px
+    &__photos
+      width: 330px
+      display: inline-block
+      padding-top: 350px
+      position: relative
+      img
+        width: 66px
+        height: 66px
+        object-fit: cover
+        margin-right: 19px
+        margin-bottom: 20px
+        cursor: pointer
+        outline: none
+        &.big
+          position: absolute
+          top: 0
+          left: 0
+          width: 330px
+          height: 330px
+          margin-right: 0
+  .tab-nav
+    &__items
+      display: flex
+      padding: 0 30px
+    &__item
+      flex-grow: 1
+      &:not(:last-child)
+        border-bottom: none
+        border-right: 1px solid #999999
+  .tab__chars
+    margin: 0 auto
+    width: 75%
+
+@media (min-width: 992px)
+  .container
+    padding-left: 50px
+    padding-right: 50px
+  .hero--card
+    padding: 0
+    .container
+      padding: 0 50px
+  .tab__chars
+    margin: 0 auto
+    width: 50%
+  .card
+    &__photos
+      width: 400px
+      padding-top: 420px
+      img
+        &.big
+          width: 400px
+          height: 400px
+  .tab-nav__items
+    padding-left: 50px
+    padding-right: 50px

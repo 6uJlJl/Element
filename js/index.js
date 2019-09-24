@@ -120,16 +120,9 @@ window.onload = function() {
     speed: 300,
     responsive: [
       {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1
         }
       },
@@ -209,6 +202,58 @@ window.onload = function() {
         inputs[i].checked = false;
       }
     });
+
+  //СТРАНИЦА ТОВАРА
+  // ПЕРЕКЛЮЧЕНИЕ ФОТО
+  var photos = $(".card__photos img");
+
+  function clearImg () {
+    for (let i=0; i<photos.length; i++) {
+      photos[i].classList.remove("big");
+    };
+  };
+
+  for (let i=0; i<photos.length; i++) {
+    photos[i].addEventListener("click", function(){
+      clearImg();
+      $(this).addClass("big");
+    })
+  };
+
+  //ПЕРЕКЛЮЧЕНИЕ ТАБОВ
+  var tabnavs = $(".tab-nav__item");
+  var tabs = $(".tab__item");
+
+  function clearTabs () {
+    for (let i=0; i<tabnavs.length; i++) {
+      tabnavs[i].classList.remove("tab-nav__item--active");
+    };
+    for (let i=0; i<tabs.length; i++) {
+      tabs[i].classList.remove("active");
+    };
+  }
+
+  $(".tab-nav__descr").on("click", function(ev){
+    ev.preventDefault();
+    clearTabs();
+    $(".tab-nav__descr").addClass("tab-nav__item--active");
+    $(".tab__descr").addClass("active");
+  });
+
+  $(".tab-nav__chars").on("click", function(ev){
+    ev.preventDefault();
+    clearTabs();
+    $(".tab-nav__chars").addClass("tab-nav__item--active");
+    $(".tab__chars").addClass("active");
+  });
+
+  $(".tab-nav__docs").on("click", function(ev){
+    ev.preventDefault();
+    clearTabs();
+    $(".tab-nav__docs").addClass("tab-nav__item--active");
+    $(".tab__docs").addClass("active");
+  });
+
 
   // $(window).click(function(ev){
   //   if (!$(".form__search").hasClass("header__navigation")){
