@@ -83,6 +83,11 @@ body {
     width: 100%; }
   .button:hover, .button:focus {
     background-color: #2db6fd; }
+  .button--black {
+    background-color: #363636; }
+    .button--black:hover, .button--black:focus {
+      background-color: #dedede;
+      color: #363636; }
 
 .button-link {
   display: block;
@@ -242,6 +247,10 @@ body {
     width: 87px;
     height: 45px; }
   .form-inline .btn {
+    width: 87px;
+    height: 45px; }
+  .btn.list-icon {
+    padding-top: 10px;
     width: 87px;
     height: 45px; } }
 

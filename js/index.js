@@ -254,6 +254,21 @@ window.onload = function() {
     $(".tab__docs").addClass("active");
   });
 
+  // СПИСОК ТОВАРОВ
+  // Удаление товара
+
+  var closeBtns = $(".item__close");
+  for (let i=0; i<closeBtns.length; i++) {
+    closeBtns[i].addEventListener("click", function(ev){
+      ev.preventDefault();
+      $(this).parent().parent().remove();
+      let count = $(".item__close");
+      console.log(count.length);
+      if (count.length == 0) {
+        $(".spisok").addClass("empty");
+      }
+    })
+  };
 
   // $(window).click(function(ev){
   //   if (!$(".form__search").hasClass("header__navigation")){

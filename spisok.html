@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Список покупок | Element</title>
+    <title>Список товаров | Element</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -52,45 +52,103 @@
                 </div>
                 <button class="btn btn-outline-secondary my-2 my-sm-1" type="submit"></button>
               </form>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="list-icon"></span>
-              </button>
+              <a class="btn list-icon" href="spisok.html"></a>
         </div>
       </div>
     </div>
   </header>
   <main class="main">
 
-    <section class="hero hero--galery">
+    <section class="hero hero--spisok">
       <div class="container">
         <nav aria-label="breadcrumb bg-transparent">
             <ol class="breadcrumb bg-transparent">
               <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Галерея</li>
+              <li class="breadcrumb-item active" aria-current="page">Список товаров</li>
             </ol>
           </nav>
       </div>
     </section>
 
-    <section class="galery">
+    <section class="spisok">
       <div class="container">
-        <h1 class="galery__title">Галерея</h1>
-        <ul class="galery__items">
-          <li class="galery__item"><img src="img/page-galery/photo-1.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-2.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-3.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-4.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-5.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-6.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-7.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-8.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-9.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-10.jpg" alt="" class="photo"></li>
-          <li class="galery__item"><img src="img/page-galery/photo-11.jpg" alt="" class="photo"></li>
+        <h1 class="spisok__title">Список товаров</h1>
+        <p class="spisok__empty">Здесь пока нет товаров...</p>
+        <p class="spisok__titles">
+          <span>Наименование</span>
+          <span>Объём</span>
+          <span class="more">Количество</span>
+          <span class="more">Цена</span>
+        </p>
+        <ul class="spisok__items">
+          <li class="spisok__item clearfix">
+            <img src="img/page-spisok/item-1.jpg" alt="Фотография товара" class="item__image">
+            <div class="item__info">
+              <div class="item__name">
+                <h2>Название товара в каталоге в несколько строк</h2>
+                <span class="item__artikl">AXL-12345</span>
+              </div>
+              <span class="item__value">2,5 л</span>
+              <div class="item__nums">
+                <button class="nums__minus">Меньше</button>
+                <label class="nums__label" for="card-numbers">Количество
+                  <input class="nums__input" name="card-numbers" type="number" value="1" id="card-numbers" min="1" max="10">
+                </label>
+                <button class="nums__plus">Больше</button>
+              </div>
+              <span class="item__price">3 360 руб.</span>
+              <button class="item__close">Закрыть</button>
+            </div>
+          </li>
+          <li class="spisok__item clearfix">
+            <img src="img/page-spisok/item-1.jpg" alt="Фотография товара" class="item__image">
+            <div class="item__info">
+              <div class="item__name">
+                <h2>Название товара в каталоге в несколько строк</h2>
+                <span class="item__artikl">AXL-12345</span>
+              </div>
+              <span class="item__value">2,5 л</span>
+              <div class="item__nums">
+                <button class="nums__minus">Меньше</button>
+                <label class="nums__label" for="card-numbers">Количество
+                  <input class="nums__input" name="card-numbers" type="number" value="1" id="card-numbers" min="1" max="10">
+                </label>
+                <button class="nums__plus">Больше</button>
+              </div>
+              <span class="item__price">3 360 руб.</span>
+              <button class="item__close">Закрыть</button>
+            </div>
+          </li>
+          <li class="spisok__item clearfix">
+            <img src="img/page-spisok/item-1.jpg" alt="Фотография товара" class="item__image">
+            <div class="item__info">
+              <div class="item__name">
+                <h2>Название товара в каталоге в несколько строк</h2>
+                <span class="item__artikl">AXL-12345</span>
+              </div>
+              <span class="item__value">2,5 л</span>
+              <div class="item__nums">
+                <button class="nums__minus">Меньше</button>
+                <label class="nums__label" for="card-numbers">Количество
+                  <input class="nums__input" name="card-numbers" type="number" value="1" id="card-numbers" min="1" max="10">
+                </label>
+                <button class="nums__plus">Больше</button>
+              </div>
+              <span class="item__price">3 360 руб.</span>
+              <button class="item__close">Закрыть</button>
+            </div>
+          </li>
         </ul>
+        <p class="spisok__total">
+          Итого:
+          <span class="spisok__total-number">10 080 руб.</span>
+        </p>
+        <div class="spisok__buttons">
+            <button class="button spisok__button">Заказать звонок</button>
+            <button class="button button--black spisok__button">Сохранить список (PDF)</button>
+        </div>
       </div>
     </section>
-
 
   </main>
 

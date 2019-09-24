@@ -107,6 +107,22 @@ function styleGalery() {
 		.pipe(gulp.dest('css'));
 };
 
+function styleSpisok() {
+  return gulp.src('sass/spisok.sass')
+		.pipe(plumber())
+		.pipe(sass())
+		.pipe(postcss([
+			autoprefixer()
+    ]))
+    .pipe(gulp.dest('css'))
+    .pipe(cleanCSS())
+    .pipe(rename({
+      basename: 'spisok',
+      suffix: '.min'
+    }))
+		.pipe(gulp.dest('css'));
+};
+
 function jpg() {
   return gulp.src("optimg/**/*.jpg")
     .pipe(imagemin([
@@ -142,6 +158,8 @@ function watch() {
   gulp.watch("sass/**/catalog.sass", styleCatalog);
   gulp.watch("sass/**/card.sass", styleCard);
   gulp.watch("sass/**/galery.sass", styleGalery);
+  gulp.watch("sass/**/spisok.sass", styleSpisok);
+
 }
 
 var build = gulp.series(
@@ -151,6 +169,7 @@ var build = gulp.series(
   styleCatalog,
   styleCard,
   styleGalery,
+  styleSpisok,
   jpg, png, svg,
   watch
 );
