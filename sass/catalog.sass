@@ -31,11 +31,17 @@ body
     width: 258px
     height: 40px
     background-color: #363636
-    border: none
+    border: 1px solid transparent
     color: #ffffff
     font-size: 16px
     font-weight: 400
     text-transform: uppercase
+    cursor: pointer
+    &:hover,
+    &:focus
+      background-color: #ffffff
+      color: #363636
+      border-color: #363636
   &__main
     margin-bottom: 100px
     position: relative
@@ -108,6 +114,12 @@ body
     font-size: 16px
     text-transform: uppercase
     margin-top: 20px
+    cursor: pointer
+    &:hover,
+    &:focus
+      color: #fff
+      background-color: rgba(45, 182, 253, 1)
+      text-decoration: none
   &__clear
     width: 208px
     height: 40px
@@ -117,6 +129,11 @@ body
     font-size: 16px
     text-decoration: underline
     margin-top: 10px
+    cursor: pointer
+    &:hover,
+    &:focus
+      color: $active
+      outline: none
 
 .filters__button--open+.filters__wrapper
   display: block
@@ -136,6 +153,7 @@ body
     text-transform: uppercase
     position: relative
     margin-bottom: 19px
+    cursor: pointer
     &:after
       position: absolute
       content: "\e800"
@@ -214,10 +232,15 @@ body
     border: 1px solid #363636
     background-color: #fff
     font-size: 0
+    cursor: pointer
     &:before
       content: "\e801"
       font-family: "fontello"
       font-size: 18px
+    &:hover,
+    &:focus
+      color: white
+      background-color: $active
 
 .catalog-form__search.open
   display: block

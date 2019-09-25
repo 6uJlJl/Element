@@ -21,6 +21,10 @@
           color: $active
           text-decoration: none
           outline: none
+        &.active
+          color: $active !important
+          text-decoration: none
+          outline: none
   &__copy
     display: block
     margin-top: 40px
@@ -53,7 +57,7 @@
     color: #ffffff
     &:focus+.questions__label
       font-size: 12px
-      transform: translateY(-50px)
+      transform: translateY(-55px)
       transition: 0.5s
   &__label
     display: block

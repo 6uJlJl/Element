@@ -140,6 +140,7 @@ window.onload = function() {
     $(".form__search input").val("");
     $("#navbarNavAltMarkup").addClass("collapse navbar-collapse")
     $(".navbar-nav").removeClass("active");
+    $(".navbar-toggler").removeClass("active");
   });
 
   $(".search__label").on("click", function(){
@@ -152,16 +153,19 @@ window.onload = function() {
     $(".form__search").removeClass("active");
     $("#navbarNavAltMarkup").addClass("collapse navbar-collapse")
     $(".navbar-nav").removeClass("active");
+    $(".navbar-toggler").removeClass("active");
   });
 
   $(window).resize(function(){
     $(".form__search").removeClass("active");
     $("#navbarNavAltMarkup").addClass("collapse navbar-collapse")
     $(".navbar-nav").removeClass("active");
+    $(".navbar-toggler").removeClass("active");
   });
 
   $(".navbar-expand-lg").click( function(){
     if ($(document).width() < 992) {
+      $(".navbar-toggler").toggleClass("active");
       $("#navbarNavAltMarkup").toggleClass("collapse navbar-collapse")
       $(".navbar-nav").toggleClass("active");
       var pos = ($(".hero").offset().top - $(window).scrollTop() +1) + "px";

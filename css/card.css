@@ -130,7 +130,11 @@ body {
   font-weight: 400;
   text-decoration: underline;
   padding: 0;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  cursor: pointer; }
+  .chars__button:hover, .chars__button:focus {
+    color: #2db6fd;
+    outline: none; }
 
 .volume__title {
   color: #363636;
@@ -187,7 +191,13 @@ body {
     color: #ffffff;
     font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    border: 1px solid transparent;
+    cursor: pointer; }
+    .price__buy:hover, .price__buy:focus {
+      color: #2db6fd;
+      background-color: #fff;
+      border-color: #2db6fd; }
 
 .slick-dots {
   bottom: 0; }
@@ -216,8 +226,12 @@ body {
     border-bottom: 1px solid #999999; }
   .tab-nav__item a {
     color: #363636; }
+    .tab-nav__item a:hover, .tab-nav__item a:focus {
+      color: #2db6fd; }
   .tab-nav__item--active {
     background-color: #eeeeee; }
+    .tab-nav__item--active a:hover, .tab-nav__item--active a:focus {
+      color: #363636; }
 
 .card__tab-items {
   padding-bottom: 80px; }

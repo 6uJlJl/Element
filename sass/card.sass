@@ -83,6 +83,11 @@ body
     text-decoration: underline
     padding: 0
     margin-bottom: 40px
+    cursor: pointer
+    &:hover,
+    &:focus
+      color: $active
+      outline: none
 
 .volume
   &__title
@@ -139,6 +144,13 @@ body
     font-size: 16px
     text-transform: uppercase
     margin-bottom: 50px
+    border: 1px solid transparent
+    cursor: pointer
+    &:hover,
+    &:focus
+      color: $active
+      background-color: #fff
+      border-color: $active
 
 .slick-dots
   bottom: 0
@@ -165,8 +177,15 @@ body
       border-bottom: 1px solid #999999
     a
       color: $text-color
+      &:hover,
+      &:focus
+        color: $active
     &--active
       background-color: #eeeeee
+      a
+        &:hover,
+        &:focus
+          color: $text-color
 
 .card__tab-items
   padding-bottom: 80px

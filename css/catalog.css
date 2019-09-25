@@ -80,11 +80,16 @@ body {
     width: 258px;
     height: 40px;
     background-color: #363636;
-    border: none;
+    border: 1px solid transparent;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer; }
+    .catalog__button:hover, .catalog__button:focus {
+      background-color: #ffffff;
+      color: #363636;
+      border-color: #363636; }
   .catalog__main {
     margin-bottom: 100px;
     position: relative; }
@@ -161,7 +166,12 @@ body {
     color: #363636;
     font-size: 16px;
     text-transform: uppercase;
-    margin-top: 20px; }
+    margin-top: 20px;
+    cursor: pointer; }
+    .filters__submit:hover, .filters__submit:focus {
+      color: #fff;
+      background-color: #2db6fd;
+      text-decoration: none; }
   .filters__clear {
     width: 208px;
     height: 40px;
@@ -170,7 +180,11 @@ body {
     color: #555555;
     font-size: 16px;
     text-decoration: underline;
-    margin-top: 10px; }
+    margin-top: 10px;
+    cursor: pointer; }
+    .filters__clear:hover, .filters__clear:focus {
+      color: #2db6fd;
+      outline: none; }
 
 .filters__button--open + .filters__wrapper {
   display: block;
@@ -188,7 +202,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 19px; }
+  margin-bottom: 19px;
+  cursor: pointer; }
   .filter__button:after {
     position: absolute;
     content: "\e800";
@@ -269,11 +284,15 @@ body {
     height: 41px;
     border: 1px solid #363636;
     background-color: #fff;
-    font-size: 0; }
+    font-size: 0;
+    cursor: pointer; }
     .catalog-form__submit:before {
       content: "\e801";
       font-family: "fontello";
       font-size: 18px; }
+    .catalog-form__submit:hover, .catalog-form__submit:focus {
+      color: white;
+      background-color: #2db6fd; }
 
 .catalog-form__search.open {
   display: block; }
