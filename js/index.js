@@ -1,5 +1,11 @@
 window.onload = function() {
 
+  // ВНИМАНИЕ! ОТМЕНА ОТПРАВИ ФОРМЫ, УБРАТЬ ПОСЛЕ ПОКЛЮЧЕНИЯ PHP
+  $(".questions__form").on("submit", function(ev){
+    ev.preventDefault();
+  })
+
+
   // ПОДКЛЮЧЕНИЕ СДАЙДЕРОВ в разделе МАТЕРИАЛЫ
 
   $('.prom__items').slick({
@@ -273,6 +279,39 @@ window.onload = function() {
       }
     })
   };
+
+  // ОБРАБОТКА ИНПУТОВ
+  var inputs = $("input");
+
+  for (let i=0; i<inputs.length; i++) {
+
+    if (inputs[i].value != "") {
+      inputs[i].classList.add("fill");
+    }
+    else {
+      inputs[i].classList.remove("fill");
+    };
+
+    inputs[i].addEventListener("blur", function(){
+      console.log(inputs[i].value);
+      if (inputs[i].value != "") {
+        inputs[i].classList.add("fill");
+      }
+      else {
+        inputs[i].classList.remove("fill");
+      }
+    })
+  };
+
+  // ФОРМА ОБРАТНОГО ЗВОНКА
+  $(".magnific-callback").magnificPopup({
+    type:'inline'
+  })
+
+  // СООБЩЕНИЕ ПОСЛЕ ОТПРАВКИ ВОПРОСА
+  $(".magnific-questions").magnificPopup({
+    type:'inline'
+  })
 
   // $(window).click(function(ev){
   //   if (!$(".form__search").hasClass("header__navigation")){

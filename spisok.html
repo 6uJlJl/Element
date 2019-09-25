@@ -145,7 +145,7 @@
           <span class="spisok__total-number">10 080 руб.</span>
         </p>
         <div class="spisok__buttons">
-            <button class="button spisok__button">Заказать звонок</button>
+            <button class="button spisok__button magnific-callback" data-mfp-src=".callback-popup">Заказать звонок</button>
             <button class="button button--black spisok__button">Сохранить список (PDF)</button>
         </div>
       </div>
@@ -160,11 +160,11 @@
           <b>Есть вопросы?</b>
           Мы вам перезвоним!</h2>
         <form action="post" class="questions__form">
-          <input class="questions__input form__item" type="text" name="c" id="questions-name">
+          <input class="questions__input form__item" type="text" name="questions-name" id="questions-name">
           <label class="questions__label" for="questions-name">Как к вам обращаться?</label>
           <input class="questions__input form__item" type="tel" name="questions-phone" id="questions-phone">
           <label class="questions__label questions__label--phone" for="questions-phone">Ваш номер телефона</label>
-          <button class="button button--dark form__item" type="submit">Отправить</button>
+          <button class="button button--dark form__item magnific-questions" type="submit" data-mfp-src=".questions-popup">Отправить</button>
         </form>
       </section>
       <section class="footer__navigation">
@@ -182,6 +182,22 @@
       </section>
     </div>
   </footer>
+
+  <div class="popup callback-popup mfp-hide">
+    <form action="post" class="popup__form">
+      <h2 class="popup__title">Заказать звонок</h2>
+      <input class="popup__input" type="text" name="callback-name" id="callback-name" required>
+      <label class="popup__label" for="callback-name">Как к вам обращаться?</label>
+      <input class="popup__input" type="tel" name="callback-phone" id="callback-phone" required>
+      <label class="popup__label popup__label--phone" for="callback-phone">Ваш номер телефона</label>
+      <button class="button-link popup__submit" type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <div class="popup questions-popup mfp-hide">
+    <h2 class="popup__title">Готово!</h2>
+    <p>Совсем скоро наш менеджер свяжется с вами и ответит на все ваши вопросы.</p>
+  </div>
 
   <script src="js/jquery-3.4.1.slim.min.js"></script>
   <script src="js/slick.min.js"></script>

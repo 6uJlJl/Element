@@ -104,11 +104,11 @@
           <b>Есть вопросы?</b>
           Мы вам перезвоним!</h2>
         <form action="post" class="questions__form">
-          <input class="questions__input form__item" type="text" name="c" id="questions-name">
+          <input class="questions__input form__item" type="text" name="questions-name" id="questions-name">
           <label class="questions__label" for="questions-name">Как к вам обращаться?</label>
           <input class="questions__input form__item" type="tel" name="questions-phone" id="questions-phone">
           <label class="questions__label questions__label--phone" for="questions-phone">Ваш номер телефона</label>
-          <button class="button button--dark form__item" type="submit">Отправить</button>
+          <button class="button button--dark form__item magnific-questions" type="submit" data-mfp-src=".questions-popup">Отправить</button>
         </form>
       </section>
       <section class="footer__navigation">
@@ -126,6 +126,11 @@
       </section>
     </div>
   </footer>
+
+  <div class="popup questions-popup mfp-hide">
+    <h2 class="popup__title">Готово!</h2>
+    <p>Совсем скоро наш менеджер свяжется с вами и ответит на все ваши вопросы.</p>
+  </div>
 
   <script src="js/jquery-3.4.1.slim.min.js"></script>
   <script src="js/slick.min.js"></script>

@@ -128,6 +128,72 @@ body {
   height: 1px;
   background-color: #363636; }
 
+@media (min-width: 576px) {
+  .button-link {
+    width: 350px; } }
+
+@media (min-width: 768px) {
+  .button {
+    width: 350px; }
+    .button--dark {
+      width: 33%; }
+  .button-link {
+    width: 350px;
+    margin-top: 0; } }
+
+.popup {
+  position: relative;
+  padding: 60px 95px;
+  width: 540px;
+  margin: 0 auto;
+  border: 1px solid #333333;
+  background-color: #ffffff; }
+  .popup__title {
+    width: 100%;
+    text-align: center;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 75px; }
+  .popup__input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #333333;
+    outline: none;
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: #363636; }
+    .popup__input:focus + .popup__label,
+    .popup__input.fill + .popup__label {
+      font-size: 12px;
+      transform: translateY(-25px);
+      transition: 0.5s; }
+  .popup__label {
+    position: absolute;
+    top: 180px;
+    left: 95px;
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+    transform: translateY(0);
+    transition: 0.5s; }
+    .popup__label--phone {
+      top: 270px; }
+  .popup__submit {
+    margin-top: 20px; }
+  .popup p {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center; }
+
+.questions-popup .popup__title {
+  margin-bottom: 30px; }
+
 .contact {
   background-color: #363636;
   color: #bababa;
@@ -888,7 +954,8 @@ body {
     border-bottom: 2px solid #ffffff;
     line-height: 30px;
     color: #ffffff; }
-    .questions__input:focus + .questions__label {
+    .questions__input:focus + .questions__label,
+    .questions__input.fill + .questions__label {
       font-size: 12px;
       transform: translateY(-55px);
       transition: 0.5s; }
@@ -937,16 +1004,3 @@ body {
     width: 33%; }
   .footer__nav {
     padding: 0 15%; } }
-
-@media (min-width: 576px) {
-  .button-link {
-    width: 350px; } }
-
-@media (min-width: 768px) {
-  .button {
-    width: 350px; }
-    .button--dark {
-      width: 33%; }
-  .button-link {
-    width: 350px;
-    margin-top: 0; } }
