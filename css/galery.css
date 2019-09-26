@@ -97,16 +97,17 @@ body {
   .hero--galery {
     padding: 0 30px; }
   .galery__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
+    width: 100%;
+    text-align: center; }
   .galery__item {
-    max-width: 49%;
+    display: inline-block;
+    width: 49%;
+    padding: 10px;
     background-color: #fff; } }
 
 @media (min-width: 992px) {
   .galery__item {
-    max-width: 32%; }
+    max-width: 33%; }
   .container {
     padding-left: 50px;
     padding-right: 50px; }

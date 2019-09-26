@@ -124,7 +124,6 @@ body {
   display: block;
   border: none;
   background-color: #fff;
-  height: 13px;
   color: #555555;
   font-size: 14px;
   font-weight: 400;
@@ -177,8 +176,11 @@ body {
   height: 38px;
   width: 80px;
   margin: 0 -5px 0 -4px;
+  padding: 0;
   text-align: center;
-  border: 1px solid #ced4da; }
+  border: 1px solid #ced4da;
+  border-radius: 0px;
+  box-shadow: none; }
 
 .price {
   display: block;

@@ -277,7 +277,8 @@ body {
     padding: 0 21px;
     color: #363636;
     line-height: 40px;
-    border-right: none; }
+    border-right: none;
+    border-radius: 0px; }
   .catalog-form__submit {
     display: none;
     min-width: 66px;
