@@ -33,7 +33,7 @@
         </a>
         <div class="header__navigation">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="menu-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -41,7 +41,6 @@
                       <a class="nav-item nav-link" href="catalog.html">Каталог<span class="sr-only">(current)</span></a>
                       <a class="nav-item nav-link" href="about.html">О нас</a>
                       <a class="nav-item nav-link" href="galery.html">Галерея</a>
-                      <a class="nav-item nav-link" href="#">Новости</a>
                       <a class="nav-item nav-link" href="contacts.html">Контакты</a>
                     </div>
                   </div>
@@ -61,6 +60,7 @@
   <main class="main">
 
     <section class="hero hero--card">
+      <h2 class="visually-hidden">Страница о компании</h2>
       <div class="container">
         <nav aria-label="breadcrumb bg-transparent">
             <ol class="breadcrumb bg-transparent">
@@ -73,10 +73,8 @@
       </div>
     </section>
 
-    <form class="card">
-      <form action="post">
+    <form class="card" action="post">
       <div class="container">
-        </form>
           <h1 class="card__title">Название товара в&nbsp;каталоге в&nbsp;несколько строк</h1>
           <ul class="card__types">
             <li class="card__type">Износостойкая</li>
@@ -122,7 +120,7 @@
               <div class="card__nums">
                 <button class="nums__minus">Меньше</button>
                 <label class="nums__label" for="card-numbers">Количество
-                  <input class="nums__input" name="card-numbers" type="number" value="1" id="card-numbers" min="1" max="10">
+                  <input class="nums__input" name="card-numbers" type="number" value="1" id="card-numbers" min="1">
                 </label>
                 <button class="nums__plus">Больше</button>
               </div>
@@ -131,11 +129,27 @@
               </div>
               <button type="submit" class="price__buy">Купить</button>
             </div>
-            <div class="card__photos">
-              <img src="img/page-card/item-1.jpg" alt="Фото товара 1" class="card__photo">
-              <img src="img/page-card/item-2.jpg" alt="Фото товара 2" class="card__photo">
-              <img src="img/page-card/item-3.jpg" alt="Фото товара 3" class="card__photo">
-              <img class="big" src="img/page-card/item-4.jpg" alt="Фото товара 4" class="card__photo">
+            <div class="card__wrapper-right">
+                <div class="card__photos">
+                    <a class="magnific-image" href="img/page-card/item-1.jpg" title="big product photo">
+                      <img src="img/page-card/item-1.jpg" alt="Фото товара 1" class="card__photo">
+                    </a>
+                    <a class="magnific-image" href="img/page-card/item-2.jpg" title="big product photo">
+                      <img src="img/page-card/item-2.jpg" alt="Фото товара 1" class="card__photo">
+                    </a>
+                    <a class="magnific-image" href="img/page-card/item-3.jpg" title="big product photo">
+                      <img src="img/page-card/item-3.jpg" alt="Фото товара 1" class="card__photo">
+                    </a>
+                    <a class="magnific-image" href="img/page-card/item-4.jpg" title="big product photo">
+                      <img src="img/page-card/item-4.jpg" alt="Фото товара 1" class="card__photo">
+                    </a>
+                  </div>
+                  <div class="card__photos--small">
+                    <img src="img/page-card/item-1.jpg" alt="Фото товара 1" class="card__photo">
+                    <img src="img/page-card/item-2.jpg" alt="Фото товара 1" class="card__photo">
+                    <img src="img/page-card/item-3.jpg" alt="Фото товара 1" class="card__photo">
+                    <img src="img/page-card/item-4.jpg" alt="Фото товара 1" class="card__photo">
+                  </div>
             </div>
         </div>
       </div>
@@ -234,7 +248,6 @@
         </div>
       </div>
     </form>
-    </section>
 
   </main>
 
@@ -253,14 +266,14 @@
         </form>
       </section>
       <section class="footer__navigation">
+        <h2 class="visually-hidden">Дополнительная навигация по сайту</h2>
         <a href="index.html" aria-label="Ссылка на домашнюю страницу">
-          <img class="footer__logo" src="img/footer/logo-white.png" alt="Логотип компании" class="footer__logo">
+          <img class="footer__logo" src="img/footer/logo-white.png" alt="Логотип компании">
         </a>
         <ul class="footer__nav d-flex flex-wrap justify-content-around">
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="about.html">О нас</a></li>
           <li><a href="galery.html">Галерея</a></li>
-          <li><a href="#">Новости</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <span class="footer__copy">Lorem ipsum</span>
@@ -279,32 +292,3 @@
   <script src="js/index.js"></script>
 </body>
 </html>
-
-<!--
-Макет и картинки предоставлю, но возможно какую-то мелочуху придется вырезать из макета.
-
-Обязательно:
-Верстка адаптивная (xs, sm, md, lg, xl), валидная.
-Использовать препроцессор Sass (SCSS).
-Использовать сетку Bootstrap 4.
-
-Желательно:
-Mobile First
-Нейминг по БЭМ,
-использовать Gulp,
-для модалок использовать MagnifiqPopup
-для слайдера использовать slick slider
-HTML препроцессор Pug
-
-PerfectPixel не требуется.
-IE до 11 в расчет не берем.
-Проверять валидность будем на 3w валидаторе + google page speed insights (нужно в зеленой зоне).
--->
-<!--
-.icon-right-open:before { content: '\e800'; }
-.icon-search:before { content: '\e801'; }
-.icon-cancel:before { content: '\e802'; }
-.icon-location:before { content: '\e803'; }
-.icon-menu:before { content: '\f0c9'; }
-.icon-list-bullet:before { content: '\f0ca'; }
-.icon-copyright:before { content: '\f1f9'; }  -->

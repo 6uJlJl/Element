@@ -1,9 +1,13 @@
 .contact
   background-color: #363636
   color: #bababa
-  padding: 12px 0
+  padding: 10px 0
   &__address
+    display: inline-block
     color: #bababa
+    margin-bottom: 10px
+    padding-left: 0
+    padding-right: 0
     &:hover
       color: #bababa
       &:before,
@@ -16,9 +20,15 @@
     font-size: 18px
   &__items
     width: 100%
-    margin-top: 10px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-left: 0
+    padding-right: 0
     a
+      display: inline-block
       color: #bababa
+      margin-bottom: 10px
       &:hover,
       &:focus
         color: $active
@@ -137,8 +147,15 @@
 
 @media (min-width: 576px)
   .contact
+    &__address
+      margin-bottom: 0
     &__items
       margin-top: 0
+      justify-content: flex-end
+      a
+        margin-bottom: 0
+      a+a
+        margin-left: 20px
   .header
     &__logo
       flex-direction: row
@@ -164,6 +181,9 @@
   .contact
     .container
       justify-content: space-between
+    &__items
+      a+a
+        margin-left: 40px
 
 @media (min-width: 992px)
   .nav-item.nav-link

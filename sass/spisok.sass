@@ -126,11 +126,16 @@ body
     height: 38px
     border: 1px solid #ced4da
     background-color: #fff
-    margin-top: 1px
+    padding-bottom: 0px
+    border-right-color: transparent
+    margin-right: 1px
     &:before
       content: "\e806"
       font-family: "fontello"
       font-size: 18px
+    &:disabled:before
+      color: #eee
+
   &__plus
     font-size: 0
     font-size: 0
@@ -138,7 +143,7 @@ body
     height: 38px
     border: 1px solid #ced4da
     background-color: #fff
-    margin-top: 1px
+    padding-bottom: 0px
     &:before
       content: "\e805"
       font-family: "fontello"
@@ -149,8 +154,9 @@ body
     font-size: 18px
     height: 38px
     width: 80px
-    margin: 0 -4px
+    margin: 0 -4px 0 -5px
     text-align: center
+    border: 1px solid #ced4da
 
 @media (min-width: 576px)
   .hero

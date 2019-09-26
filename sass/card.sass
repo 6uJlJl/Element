@@ -103,7 +103,9 @@ body
     height: 38px
     border: 1px solid #ced4da
     background-color: #fff
-    margin-top: 1px
+    padding-bottom: 0
+    border-right-color: transparent
+    margin-right: 1px
     &:before
       content: "\e806"
       font-family: "fontello"
@@ -115,7 +117,7 @@ body
     height: 38px
     border: 1px solid #ced4da
     background-color: #fff
-    margin-top: 1px
+    padding-bottom: 0px
     &:before
       content: "\e805"
       font-family: "fontello"
@@ -126,8 +128,9 @@ body
     font-size: 18px
     height: 38px
     width: 80px
-    margin: 0 -4px
+    margin: 0 -5px 0 -4px
     text-align: center
+    border: 1px solid #ced4da
 
 .price
   display: block
@@ -151,6 +154,9 @@ body
       color: $active
       background-color: #fff
       border-color: $active
+
+.card__photos--small
+  display: none
 
 .slick-dots
   bottom: 0
@@ -285,28 +291,32 @@ body
     &__wrapper
       display: flex
       justify-content: space-between
+    &__wrapper-right
+      width: 330px
     &__info
       margin-right: 30px
     &__photos
       width: 330px
-      display: inline-block
-      padding-top: 350px
-      position: relative
+      height: 330px
+      margin-bottom: 20px
       img
-        width: 66px
-        height: 66px
+        width: 330px
+        height: 330px
         object-fit: cover
-        margin-right: 19px
-        margin-bottom: 20px
         cursor: pointer
         outline: none
-        &.big
-          position: absolute
-          top: 0
-          left: 0
-          width: 330px
-          height: 330px
-          margin-right: 0
+        img
+          width: 100%
+          height: 100%
+    &__photos--small
+      display: block
+      img
+        width: 65px
+  .slick-list
+    padding: 0 !important
+  .card__photos--small .slick-slide
+    margin: 0 10px
+
   .tab-nav
     &__items
       display: flex
@@ -332,13 +342,14 @@ body
     margin: 0 auto
     width: 50%
   .card
+    &__wrapper-right
+      width: 400px
     &__photos
       width: 400px
-      padding-top: 420px
+      height: 400px
       img
-        &.big
-          width: 400px
-          height: 400px
+        width: 400px
+        height: 400px
   .tab-nav__items
     padding-left: 50px
     padding-right: 50px

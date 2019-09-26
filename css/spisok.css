@@ -178,11 +178,15 @@ body {
   height: 38px;
   border: 1px solid #ced4da;
   background-color: #fff;
-  margin-top: 1px; }
+  padding-bottom: 0px;
+  border-right-color: transparent;
+  margin-right: 1px; }
   .nums__minus:before {
     content: "\e806";
     font-family: "fontello";
     font-size: 18px; }
+  .nums__minus:disabled:before {
+    color: #eee; }
 
 .nums__plus {
   font-size: 0;
@@ -191,7 +195,7 @@ body {
   height: 38px;
   border: 1px solid #ced4da;
   background-color: #fff;
-  margin-top: 1px; }
+  padding-bottom: 0px; }
   .nums__plus:before {
     content: "\e805";
     font-family: "fontello";
@@ -204,8 +208,9 @@ body {
   font-size: 18px;
   height: 38px;
   width: 80px;
-  margin: 0 -4px;
-  text-align: center; }
+  margin: 0 -4px 0 -5px;
+  text-align: center;
+  border: 1px solid #ced4da; }
 
 @media (min-width: 576px) {
   .hero--spisok .container {

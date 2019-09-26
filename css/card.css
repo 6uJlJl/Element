@@ -148,7 +148,9 @@ body {
   height: 38px;
   border: 1px solid #ced4da;
   background-color: #fff;
-  margin-top: 1px; }
+  padding-bottom: 0;
+  border-right-color: transparent;
+  margin-right: 1px; }
   .nums__minus:before {
     content: "\e806";
     font-family: "fontello";
@@ -161,7 +163,7 @@ body {
   height: 38px;
   border: 1px solid #ced4da;
   background-color: #fff;
-  margin-top: 1px; }
+  padding-bottom: 0px; }
   .nums__plus:before {
     content: "\e805";
     font-family: "fontello";
@@ -174,8 +176,9 @@ body {
   font-size: 18px;
   height: 38px;
   width: 80px;
-  margin: 0 -4px;
-  text-align: center; }
+  margin: 0 -5px 0 -4px;
+  text-align: center;
+  border: 1px solid #ced4da; }
 
 .price {
   display: block;
@@ -198,6 +201,9 @@ body {
       color: #2db6fd;
       background-color: #fff;
       border-color: #2db6fd; }
+
+.card__photos--small {
+  display: none; }
 
 .slick-dots {
   bottom: 0; }
@@ -325,29 +331,32 @@ body {
   .card__wrapper {
     display: flex;
     justify-content: space-between; }
+  .card__wrapper-right {
+    width: 330px; }
   .card__info {
     margin-right: 30px; }
   .card__photos {
     width: 330px;
-    display: inline-block;
-    padding-top: 350px;
-    position: relative; }
+    height: 330px;
+    margin-bottom: 20px; }
     .card__photos img {
-      width: 66px;
-      height: 66px;
+      width: 330px;
+      height: 330px;
       -o-object-fit: cover;
          object-fit: cover;
-      margin-right: 19px;
-      margin-bottom: 20px;
       cursor: pointer;
       outline: none; }
-      .card__photos img.big {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 330px;
-        height: 330px;
-        margin-right: 0; }
+      .card__photos img img {
+        width: 100%;
+        height: 100%; }
+  .card__photos--small {
+    display: block; }
+    .card__photos--small img {
+      width: 65px; }
+  .slick-list {
+    padding: 0 !important; }
+  .card__photos--small .slick-slide {
+    margin: 0 10px; }
   .tab-nav__items {
     display: flex;
     padding: 0 30px; }
@@ -371,10 +380,12 @@ body {
   .tab__chars {
     margin: 0 auto;
     width: 50%; }
+  .card__wrapper-right {
+    width: 400px; }
   .card__photos {
     width: 400px;
-    padding-top: 420px; }
-    .card__photos img.big {
+    height: 400px; }
+    .card__photos img {
       width: 400px;
       height: 400px; }
   .tab-nav__items {

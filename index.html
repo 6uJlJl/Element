@@ -18,7 +18,7 @@
     <div class="contact">
         <div class="container row align-items-center">
           <a class="contact__address col-xs col-sm-6" href="contacts.html">г. Москва, ул. Горького, д. 123</a>
-          <div class="contact__items col-xs col-sm-6 col-md-5 col-lg-4 clo-xl-3 d-flex justify-content-between ">
+          <div class="contact__items col-xs col-sm-6">
             <a href="tel:+74959999999">+7 495 999 99 99</a>
             <a href="mailto:mail@sitename.ru">mail@sitename.ru</a>
           </div>
@@ -32,7 +32,7 @@
           </div>
         <div class="header__navigation">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent pr-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="menu-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -40,7 +40,6 @@
                       <a class="nav-item nav-link" href="catalog.html">Каталог<span class="sr-only">(current)</span></a>
                       <a class="nav-item nav-link" href="about.html">О нас</a>
                       <a class="nav-item nav-link" href="galery.html">Галерея</a>
-                      <a class="nav-item nav-link" href="#">Новости</a>
                       <a class="nav-item nav-link" href="contacts.html">Контакты</a>
                     </div>
                   </div>
@@ -304,12 +303,12 @@
         </form>
       </section>
       <section class="footer__navigation">
-        <img class="footer__logo" src="img/footer/logo-white.png" alt="Логотип компании" class="footer__logo">
+        <h2 class="visually-hidden">Дополнительная навигация по сайту</h2>
+        <img class="footer__logo" src="img/footer/logo-white.png" alt="Логотип компании">
         <ul class="footer__nav d-flex flex-wrap justify-content-around">
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="about.html">О нас</a></li>
           <li><a href="galery.html">Галерея</a></li>
-          <li><a href="#">Новости</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <span class="footer__copy">Lorem ipsum</span>
@@ -341,37 +340,3 @@
   <script src="js/index.js"></script>
 </body>
 </html>
-
-<!--
-Макет и картинки предоставлю, но возможно какую-то мелочуху придется вырезать из макета.
-
-Обязательно:
-Верстка адаптивная (xs, sm, md, lg, xl), валидная.
-Использовать препроцессор Sass (SCSS).
-Использовать сетку Bootstrap 4.
-
-Желательно:
-Mobile First
-Нейминг по БЭМ,
-использовать Gulp,
-для модалок использовать MagnifiqPopup
-для слайдера использовать slick slider
-HTML препроцессор Pug
-
-PerfectPixel не требуется.
-IE до 11 в расчет не берем.
-Проверять валидность будем на 3w валидаторе + google page speed insights (нужно в зеленой зоне).
--->
-<!--
-.icon-right-open:before { content: '\e800'; }
-.icon-search:before { content: '\e801'; }
-.icon-cancel:before { content: '\e802'; }
-.icon-location:before { content: '\e803'; }
-.icon-menu:before { content: '\f0c9'; }
-.icon-list-bullet:before { content: '\f0ca'; }
-.icon-copyright:before { content: '\f1f9'; }
-.icon-check:before { content: '\e804'; }
-.icon-check-empty:before { content: '\f096';
-.icon-plus:before { content: '\e805'; }
-.icon-minus:before { content: '\e806'; }
--->

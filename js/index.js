@@ -120,7 +120,7 @@ window.onload = function() {
 
   // СТРАНИЦА КАРТОЧКА ТОВАРА
   $('.card__photos').slick({
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: false,
     speed: 300,
@@ -128,15 +128,54 @@ window.onload = function() {
       {
         breakpoint: 768,
         settings: {
+          dots: true,
           slidesToShow: 1,
           slidesToScroll: 1
         }
       },
       {
         breakpoint: 10000,
-        settings: "unslick"
+        asNavFor: '.card__photos--small'
       }
     ]
+  });
+
+  $('.card__photos--small').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.card__photos',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+
+  // ПЕРЕКЛЮЧЕНИЕ ФОТО
+
+  $('.magnific-image').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		image: {
+			verticalFit: false
+		}
+	});
+
+  // КНОПКИ + -
+  var plus = $(".nums__plus");
+  var minus = $(".nums__minus");
+
+  plus.on("click", function(ev){
+    ev.preventDefault();
+    let inp = $(this).parent().find(".nums__input");
+    inp.val( +inp.val() + 1 );
+  })
+
+  minus.on("click", function(ev){
+    ev.preventDefault();
+    let inp = $(this).parent().find(".nums__input");
+
+    if ( inp.val() > 1 ){
+      inp.val( +inp.val() - 1 );
+    };
   });
 
     // ПОИСК
@@ -213,22 +252,7 @@ window.onload = function() {
       }
     });
 
-  //СТРАНИЦА ТОВАРА
-  // ПЕРЕКЛЮЧЕНИЕ ФОТО
-  var photos = $(".card__photos img");
 
-  function clearImg () {
-    for (let i=0; i<photos.length; i++) {
-      photos[i].classList.remove("big");
-    };
-  };
-
-  for (let i=0; i<photos.length; i++) {
-    photos[i].addEventListener("click", function(){
-      clearImg();
-      $(this).addClass("big");
-    })
-  };
 
   //ПЕРЕКЛЮЧЕНИЕ ТАБОВ
   var tabnavs = $(".tab-nav__item");
